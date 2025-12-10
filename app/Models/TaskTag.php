@@ -9,4 +9,10 @@ class TaskTag extends BaseModel
 {
     /** @use HasFactory<\Database\Factories\TaskTagFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'task_id',
+        'tag_id',
+        'organization_id',
+    ];
 }

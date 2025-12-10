@@ -9,4 +9,9 @@ class Tag extends BaseModel
 {
     /** @use HasFactory<\Database\Factories\TagFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'organization_id',
+        'name',
+    ];
 }
