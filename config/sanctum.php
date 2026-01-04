@@ -47,7 +47,7 @@ return [
     |
     */
 
-    'expiration' => null,
+    'expiration' => $_ENV['SANCTUM_TOKEN_EXPIRATION'] ?? 15,
 
     /*
     |--------------------------------------------------------------------------

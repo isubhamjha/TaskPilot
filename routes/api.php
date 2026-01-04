@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthTokenController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -9,4 +10,8 @@ use Illuminate\Support\Facades\Route;
 //})->middleware('auth:sanctum');
 
 
-Route::apiResource('/tasks', TaskController::class);
+Route::post('/auth/token', [AuthTokenController::class, 'store']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('/tasks', TaskController::class);
+});

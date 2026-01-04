@@ -116,4 +116,16 @@ return [
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Token Issuance Allowed IPs
+    |--------------------------------------------------------------------------
+    |
+    | Restrict personal access token issuance to a set of IPs. Provide a
+    | comma-separated list in AUTH_TOKEN_ALLOWED_IPS. Leave empty to allow
+    | all IPs.
+    |
+    */
+    'token_allowed_ips' => array_filter(array_map('trim', explode(',', env('AUTH_TOKEN_ALLOWED_IPS', '')))),
+
 ];
