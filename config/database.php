@@ -91,16 +91,6 @@ return [
             'database' => env('DB_DATABASE', 'taskpilot'),
             'username' => env('DB_USERNAME'),
             'password' => env('DB_PASSWORD'),
-            'read' => [
-                'host' => [env('DB_HOST')],
-                'username' => env('DB_READ_USERNAME'),
-                'password' => env('DB_READ_PASSWORD'),
-            ],
-            'write' => [
-                'host' => [env('DB_HOST')],
-                'username' => env('DB_USERNAME'),
-                'password' => env('DB_PASSWORD'),
-            ],
 
             'charset' => 'utf8',
             'prefix' => '',
